@@ -1,6 +1,6 @@
 FROM python:3.12-slim
-COPY /dist/docker_demo-0.6.0-py3-none-any.whl /tmp/
 RUN pip install --no-cache-dir waitress
-RUN pip install --no-cache-dir /tmp/docker_demo-0.6.0-py3-none-any.whl
-RUN rm /tmp/docker_demo-0.6.0-py3-none-any.whl
+COPY /dist/docker_demo-0.6.1-py3-none-any.whl /tmp/
+RUN pip install --no-cache-dir /tmp/docker_demo-0.6.1-py3-none-any.whl \
+    && rm /tmp/docker_demo-0.6.1-py3-none-any.whl
 CMD ["waitress-serve", "--host=0.0.0.0", "--port=11451", "docker_demo:app"]
