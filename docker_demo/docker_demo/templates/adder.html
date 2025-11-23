@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>浮点数加法器</title>
+</head>
+<body>
+    <h2>浮点数加法器</h2>
+
+    <form method="POST">
+
+        {% if a_default is not none %}
+            <input type="number" name="a" step="any" value={{a_default}} required>
+        {% else %}
+            <input type="number" name="a" step="1" required>
+        {% endif %}
+
+        +
+
+        {% if b_default is not none %}
+            <input type="number" name="b" step="any" value={{b_default}} required>
+        {% else %}
+            <input type="number" name="b" step="1" required>
+        {% endif %}
+
+        <button type="submit">计算</button>
+    </form>
+
+    {% if result is not none %}
+        <h2>结果：{{ result }}</h2>
+    {% endif %}
+    <a href="/">回到首页</a>
+</body>
+</html>

@@ -1,0 +1,3 @@
+include docker_demo/templates/*.html
+include docker_demo/static/*.jpg
+include docker_demo/*.py

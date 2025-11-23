@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools >= 80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "docker_demo"
+version = "0.6.0"
+description = "a web app demo based on Flask"
+requires-python = ">=3.12"
+readme = "README.md"
+dependencies = ["flask >= 3.1.2"]
+
+[tool.setuptools]
+packages = ["docker_demo"]
+include-package-data = true
+
+
